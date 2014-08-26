@@ -10,4 +10,4 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(provide 'sfp-common-functions)
+(provide 'sfp-functions)
