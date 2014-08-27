@@ -1,8 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/sfp")
 
+(require 'sfp-packages)
 (require 'sfp-basic)
 (require 'sfp-functions)
-(require 'sfp-packages)
 (require 'sfp-window)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

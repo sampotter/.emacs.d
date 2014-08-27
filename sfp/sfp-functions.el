@@ -6,8 +6,4 @@
 (defun system-type-is-windows-nt () (equal system-type 'windows-nt))
 (defun system-type-is-cygwin () (equal system-type 'cygwin))
 
-(defun install-package-if-necessary (package)
-  (unless (package-installed-p package)
-    (package-install package)))
-
 (provide 'sfp-functions)
