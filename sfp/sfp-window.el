@@ -39,6 +39,8 @@
       (install-package-if-necessary package)
     (error nil)))
 
-(load-theme 'adwaita t)
+(load-theme 'whiteboard t)
+
+(set-frame-font "Monospace 8" :frames t)
 
 (provide 'sfp-window)
