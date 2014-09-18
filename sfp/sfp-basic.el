@@ -11,6 +11,10 @@
 ;; Make the default cursor an underscore.
 (set-default 'cursor-type 'hbar)
 
+;; Globally highlight the current line (the line the point is contained in).
+(global-hl-line-mode t)
+(set-face-background 'hl-line "#efefef")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use window-number mode for jumping to windows with alt-num.
 
