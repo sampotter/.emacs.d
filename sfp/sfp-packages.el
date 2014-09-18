@@ -13,7 +13,8 @@
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-(package-refresh-contents)
+(if (have-internet-connection-p)
+    (package-refresh-contents))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Install packages which are dependencies of packages installed elsewhere.
