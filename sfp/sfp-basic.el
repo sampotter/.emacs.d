@@ -23,28 +23,6 @@
 (require 'window-number)
 (window-number-mode 1)
 
-; TODO: For some reason this doesn't work... why?
-
-;; (dotimes (nth 1 10)
-;;   (global-set-key
-;;    (kbd (concat "M-" (int-to-string nth)))
-;;    '(lambda ()
-;;       (interactive)
-;;       (window-number-select nth))))
-
-; in the mean time:
-
-(global-set-key (kbd "M-1") (lambda () (interactive) (window-number-select 1)))
-(global-set-key (kbd "M-2") (lambda () (interactive) (window-number-select 2)))
-(global-set-key (kbd "M-3") (lambda () (interactive) (window-number-select 3)))
-(global-set-key (kbd "M-4") (lambda () (interactive) (window-number-select 4)))
-(global-set-key (kbd "M-5") (lambda () (interactive) (window-number-select 5)))
-(global-set-key (kbd "M-6") (lambda () (interactive) (window-number-select 6)))
-(global-set-key (kbd "M-7") (lambda () (interactive) (window-number-select 7)))
-(global-set-key (kbd "M-8") (lambda () (interactive) (window-number-select 8)))
-(global-set-key (kbd "M-9") (lambda () (interactive) (window-number-select 9)))
-(global-set-key (kbd "M-0") (lambda () (interactive) (window-number-select 10)))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Have backups and auto-saves be stored in the tmp dir.
 
