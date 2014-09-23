@@ -43,4 +43,8 @@
 
 (set-frame-font "Monospace 8" :frames t)
 
+(mapcar (lambda (pair) (add-to-list 'default-frame-alist pair))
+	(list '(width . 80)
+	      '(height . 24)))
+
 (provide 'sfp-window)
