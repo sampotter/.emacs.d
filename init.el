@@ -16,6 +16,7 @@
 (require 'sfp-jabber)
 (require 'sfp-latex)
 (require 'sfp-lisp)
+(require 'sfp-magit)
 (require 'sfp-matlab)
 (require 'sfp-python)
 (require 'sfp-supercollider)
