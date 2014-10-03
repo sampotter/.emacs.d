@@ -41,7 +41,7 @@
 
 (load-theme 'whiteboard t)
 
-(set-frame-font "Monospace 8" :frames t)
+(set-default-font "Monospace-8")
 
 (mapcar (lambda (pair) (add-to-list 'default-frame-alist pair))
 	(list '(width . 80)
