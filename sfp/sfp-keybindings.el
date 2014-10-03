@@ -32,7 +32,6 @@
 		       (interactive)
 		       (window-number-select 10)))))
 
-
 (mapcar (lambda (args) (apply #'global-set-key args))
 	*keybinding-list*)
 
