@@ -13,6 +13,9 @@
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 
+(add-to-list 'package-archives
+	     '("e6h" . "http://www.e6h.org/packages/"))
+
 (if (have-internet-connection-p)
     (package-refresh-contents))
 
