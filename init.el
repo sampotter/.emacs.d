@@ -7,17 +7,20 @@
 (require 'sfp-window)
 (require 'sfp-term)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Languages
 
-(require 'sfp-c)
+(require 'sfp-cc-mode)
+(require 'sfp-chess)
 (require 'sfp-ess)
+(require 'sfp-gnus)
 (require 'sfp-haskell)
 (require 'sfp-jabber)
 (require 'sfp-latex)
 (require 'sfp-lisp)
 (require 'sfp-magit)
 (require 'sfp-matlab)
+(require 'sfp-org-mode)
 (require 'sfp-python)
 (require 'sfp-supercollider)
 
