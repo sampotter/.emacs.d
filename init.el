@@ -8,7 +8,7 @@
 (require 'sfp-term)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Languages
+;; Languages, modes, and other things.
 
 (require 'sfp-cc-mode)
 (require 'sfp-chess)
@@ -22,5 +22,5 @@
 (require 'sfp-matlab)
 (require 'sfp-org-mode)
 (require 'sfp-python)
+(require 'sfp-skeletons)
 (require 'sfp-supercollider)
-
