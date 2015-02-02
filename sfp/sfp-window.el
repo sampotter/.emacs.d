@@ -8,12 +8,9 @@
 	'flatland-theme
 	'gandalf-theme
 	'github-theme
-	'gratuitous-dark
-	'gruber-darker
 	'heroku-theme
 	'ir-black-theme
 	'jujube-theme
-	'late-night
 	'monokai-theme
 	'nzenburn-theme
 	'pastels-on-dark-theme
@@ -39,9 +36,10 @@
       (install-package-if-necessary package)
     (error nil)))
 
-(load-theme 'whiteboard t)
+(load-theme 'adwaita t)
 
-(set-default-font "Monospace-8")
+; (set-default-font "Monospace-12")
+; (setf font-use-system-font t)
 
 (mapcar (lambda (pair) (add-to-list 'default-frame-alist pair))
 	(list '(width . 80)

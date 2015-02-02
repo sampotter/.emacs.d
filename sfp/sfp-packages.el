@@ -16,7 +16,11 @@
 (add-to-list 'package-archives
 	     '("e6h" . "http://www.e6h.org/packages/"))
 
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/") t)
+
 (if (have-internet-connection-p)
+    (package-initialize)
     (package-refresh-contents))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

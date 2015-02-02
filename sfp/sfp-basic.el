@@ -3,7 +3,8 @@
 
 (setq enable-recursive-minibuffers t
       line-number-mode t
-      column-number-mode t)
+      column-number-mode t
+      browse-url-browser-function #'browse-url-firefox)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Get rid of extra GUI widgets.
@@ -19,8 +20,21 @@
 (set-default 'cursor-type 'hbar)
 
 ;; Globally highlight the current line (the line the point is contained in).
-(global-hl-line-mode t)
-(set-face-background 'hl-line "#efefef")
+; (global-hl-line-mode nil)
+; (set-face-background 'hl-line "#efefef")
+
+;; A mode to help prevent going past 80 characters in a line.
+;; See https://github.com/jordonbiondo/column-enforce-mode/ for more info.
+(add-to-list 'load-path "~/Build/column-enforce-mode")
+(require 'column-enforce-mode)
+(add-hook 'prog-mode-hook 'column-enforce-mode)
+
+;; Highlight TODO, FIXME, and BUG in programming modes.
+(add-hook 'prog-mode-hook
+	  (lambda ()
+	    (font-lock-add-keywords
+	     nil
+	     '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use window-number mode for jumping to windows with alt-num.
