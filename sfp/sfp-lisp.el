@@ -1,6 +1,4 @@
-(add-to-list 'load-path "~/Build/slime")
-
-(require 'slime-autoloads)
+(install-package-if-necessary 'slime)
 
 (setq inferior-lisp-program (shell-command-to-string "which sbcl"))
 (setq slime-contribs '(slime-fancy))

@@ -1,7 +1,5 @@
 (install-package-if-necessary 'jabber)
 
-(require 'jabber)
-
 (setq jabber-chat-buffer-show-avatar nil
       jabber-vcard-avatars-publish nil
       jabber-vcard-avaters-retrieve nil
