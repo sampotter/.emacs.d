@@ -25,4 +25,21 @@
   > _ \n
   "}" >)
 
+(define-skeleton org-activity-skeleton
+  "Inserts a template for logging my activities."
+  nil
+  > "| Time | Activity |" \n
+  > "|------+----------|" \n
+  > "| " _ "     |          |" \n)
+
+(define-skeleton org-goal-skeleton
+  "Inserts a template for logging time on a goal."
+  "What's my goal? "
+  > "| Goal | " str " |" > \n
+  > "|-+-|" > \n
+  > "| " _ " | |" > \n
+  > "|-+-|" > \n
+  > "| Achieved? | |" > \n)
+
+
 (provide 'sfp-skeletons)

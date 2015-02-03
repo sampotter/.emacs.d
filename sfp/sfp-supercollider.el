@@ -4,7 +4,4 @@
 ;; (require 'sclang)
 ;; (require 'w3m)
 
-;; (setf sclang-auto-scroll-post-buffer t
-;;       sclang-eval-line-forward t)
-
 (provide 'sfp-supercollider)
