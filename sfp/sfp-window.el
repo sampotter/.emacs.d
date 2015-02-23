@@ -1,3 +1,10 @@
+;; Get rid of extra GUI widgets.
+
+(when window-system
+  (menu-bar-mode -1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1))
+
 (defvar theme-packages
   (list 'ample-zen-theme
 	'assemblage-theme
@@ -39,8 +46,8 @@
 (load-theme 'whiteboard t)
 ; (load-theme 'assemblage t)
 
-; (set-default-font "Monospace-12")
-; (setf font-use-system-font t)
+(when window-system
+  (setf font-use-system-font t))
 
 (mapcar (lambda (pair) (add-to-list 'default-frame-alist pair))
 	(list '(width . 80)

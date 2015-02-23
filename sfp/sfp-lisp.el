@@ -1,8 +1,5 @@
-(install-package-if-necessary 'paredit)
-
-(add-to-list 'load-path "~/Build/slime")
-
-(require 'slime-autoloads)
+(install-package-if-necessary 'slime)
+(install-package-if-necessary 'paredit) 
 
 (setq inferior-lisp-program (shell-command-to-string "which sbcl"))
 (setq slime-contribs '(slime-fancy))

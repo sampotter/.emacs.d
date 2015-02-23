@@ -7,12 +7,6 @@
       browse-url-browser-function #'browse-url-firefox)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Get rid of extra GUI widgets.
-
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-
 ;; Highlight matching parens, brackets, etc.
 (show-paren-mode 1)
 
