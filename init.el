@@ -7,7 +7,6 @@
 (require 'sfp-basic)
 (require 'sfp-window)
 (require 'sfp-term)
-(require 'sfp-w3m)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Languages, modes, and other things.
