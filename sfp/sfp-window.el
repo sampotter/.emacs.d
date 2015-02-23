@@ -1,9 +1,8 @@
 ;; Get rid of extra GUI widgets.
 
-(when window-system
-  (menu-bar-mode -1)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 (defvar theme-packages
   (list 'ample-zen-theme
