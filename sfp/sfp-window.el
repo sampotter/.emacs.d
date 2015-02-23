@@ -36,7 +36,8 @@
       (install-package-if-necessary package)
     (error nil)))
 
-(load-theme 'adwaita t)
+(load-theme 'whiteboard t)
+; (load-theme 'assemblage t)
 
 ; (set-default-font "Monospace-12")
 ; (setf font-use-system-font t)

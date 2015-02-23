@@ -14,6 +14,7 @@
 
 (require 'sfp-cc-mode)
 (require 'sfp-chess)
+(require 'sfp-cmake)
 (require 'sfp-company)
 (require 'sfp-d)
 (require 'sfp-ess)
@@ -34,3 +35,17 @@
 ;; Themes.
 
 ; (require 'sfp-colorless-white-theme)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (zenburn-theme zen-and-art-theme wanderlust w3 ujelly-theme twilight-theme tuareg tronesque-theme tron-theme toxi-theme tommyh-theme tango-2-theme steady-theme soothe-theme solarized-theme sea-before-storm-theme qsimpleq-theme purple-haze-theme pastels-on-dark-theme paredit nzenburn-theme monokai-theme magit jujube-theme jabber ir-black-theme heroku-theme haskell-mode github-theme ggtags gandalf-theme function-args flatland-theme ess django-theme deep-thought-theme d-mode company color-theme-solarized clues-theme chess bubbleberry-theme auctex assemblage-theme ample-zen-theme ample-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
