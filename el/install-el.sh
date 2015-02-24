@@ -17,20 +17,31 @@ check_for_program make
 
 WINDOW_NUMBER_URL=http://www.emacswiki.org/emacs/download/window-number.el
 EMACS_SESSION_URL=http://sourceforge.net/projects/emacs-session/files/session-2.4.tar.gz/download
+P4EL_GIT_REPO=https://github.com/gareth-rees/p4.el.git
 CEDET_GIT_REPO=http://git.code.sf.net/p/cedet/git
 MATLAB_EMACS_URL=http://matlab-emacs.cvs.sourceforge.net/viewvc/matlab-emacs/matlab-emacs/?view=tar
 
 ################################################################################
-# Download miscellaneous elisp files.
+# Download miscellaneous elisp files and byte compile them.
 
 wget $WINDOW_NUMBER_URL
+emacs -Q -batch -f batch-byte-compile window-number.el
 
 ################################################################################
-# Download Emacs Session.
+# Download Emacs Session and byte compile it.
 
 wget $EMACS_SESSION_URL --output-document=session.tar.gz
 tar xvf session.tar.gz
 rm session.tar.gz
+emacs -Q -batch -f batch-byte-compile session.el
+
+################################################################################
+# Get p4.el from its git repository and install it.
+
+git clone $P4EL_GIT_REPO
+cd p4.el
+emacs -Q -batch -f batch-byte-compile p4.el
+cd -
 
 ################################################################################
 # Download, unpack, and byte compile the development CEDET from SourceForge.

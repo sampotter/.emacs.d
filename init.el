@@ -7,6 +7,7 @@
 (require 'sfp-basic)
 (require 'sfp-window)
 (require 'sfp-term)
+(require 'sfp-session)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Languages, modes, and other things.
@@ -26,6 +27,7 @@
 (require 'sfp-matlab)
 (require 'sfp-ocaml)
 (require 'sfp-org-mode)
+(require 'sfp-p4)
 (require 'sfp-python)
 (require 'sfp-skeletons)
 (require 'sfp-supercollider)
