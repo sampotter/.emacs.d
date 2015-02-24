@@ -5,3 +5,7 @@ elpa
 eshell
 tramp
 tatu
+el/cedet/
+el/matlab-emacs/
+el/p4.el/
+el/*.el
