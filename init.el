@@ -8,6 +8,7 @@
 (require 'sfp-window)
 (require 'sfp-term)
 (require 'sfp-session)
+(require 'sfp-cedet)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Languages, modes, and other things.
