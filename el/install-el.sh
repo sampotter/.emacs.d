@@ -16,6 +16,7 @@ check_for_program make
 # URLs of modes and elisp files to download.
 
 WINDOW_NUMBER_URL=http://www.emacswiki.org/emacs/download/window-number.el
+EMACS_SESSION_URL=http://sourceforge.net/projects/emacs-session/files/session-2.4.tar.gz/download
 CEDET_GIT_REPO=http://git.code.sf.net/p/cedet/git
 MATLAB_EMACS_URL=http://matlab-emacs.cvs.sourceforge.net/viewvc/matlab-emacs/matlab-emacs/?view=tar
 
@@ -23,6 +24,13 @@ MATLAB_EMACS_URL=http://matlab-emacs.cvs.sourceforge.net/viewvc/matlab-emacs/mat
 # Download miscellaneous elisp files.
 
 wget $WINDOW_NUMBER_URL
+
+################################################################################
+# Download Emacs Session.
+
+wget $EMACS_SESSION_URL --output-document=session.tar.gz
+tar xvf session.tar.gz
+rm session.tar.gz
 
 ################################################################################
 # Download, unpack, and byte compile the development CEDET from SourceForge.
@@ -33,7 +41,8 @@ make
 cd -
 
 ################################################################################
-# Download and unpack Matlab Emacs.
+# Download and unpack Matlab Emacs, using the previously installed CEDET during
+# byte compilation.
 
 wget $MATLAB_EMACS_URL --output-document=matlab-emacs.tar
 tar xvf matlab-emacs.tar
