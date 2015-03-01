@@ -19,7 +19,7 @@
 
 ;; A mode to help prevent going past 80 characters in a line.
 ;; See https://github.com/jordonbiondo/column-enforce-mode/ for more info.
-(add-to-list 'load-path "~/Build/column-enforce-mode")
+(add-to-list 'load-path "~/.emacs.d/el/column-enforce-mode")
 (require 'column-enforce-mode)
 (add-hook 'prog-mode-hook 'column-enforce-mode)
 

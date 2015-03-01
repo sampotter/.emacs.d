@@ -20,6 +20,7 @@ EMACS_SESSION_URL=http://sourceforge.net/projects/emacs-session/files/session-2.
 P4EL_GIT_REPO=https://github.com/gareth-rees/p4.el.git
 CEDET_GIT_REPO=http://git.code.sf.net/p/cedet/git
 MATLAB_EMACS_URL=http://matlab-emacs.cvs.sourceforge.net/viewvc/matlab-emacs/matlab-emacs/?view=tar
+COLUMN_ENFORCE_MODE_GIT_REPO=https://github.com/jordonbiondo/column-enforce-mode.git
 
 ################################################################################
 # Download miscellaneous elisp files and byte compile them.
@@ -62,3 +63,11 @@ touch Makefile
 make CEDET_PATH=../cedet/lisp
 cd -
 rm matlab-emacs.tar
+
+################################################################################
+# Grab column-enforce-mode from its github repository and set it up.
+
+git clone $COLUMN_ENFORCE_MODE_GIT_REPO column-enforce-mode
+cd column-enforce-mode
+emacs -Q -batch -f batch-byte-compile *.el
+cd -
