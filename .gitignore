@@ -3,6 +3,7 @@ session.*
 *.elc
 *~
 .#*
+abbrev_defs
 elpa
 eshell
 semanticdb
