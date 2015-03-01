@@ -1,9 +1,11 @@
 session.*
+.session
 *.elc
 *~
 .#*
 elpa
 eshell
+semanticdb
 srecode-map.el
 tramp
 tatu
