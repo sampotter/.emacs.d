@@ -1,3 +1,5 @@
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
 (setq load-path
       (append (list "~/Build/cc-mode-cc-mode")
 	      load-path))

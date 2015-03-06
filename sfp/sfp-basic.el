@@ -44,4 +44,17 @@
 (setq backup-directory-alist `((".*" . ,temporary-file-directory))
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+
+(when (or (system-type-is-darwin)
+	  (system-type-is-windows-nt))
+  (install-package-if-necessary 'exec-path-from-shell)
+  (exec-path-from-shell-initialize))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Use spaces instead of tabs...
+
+(setq-default indent-tabs-mode nil)
+
 (provide 'sfp-basic)
