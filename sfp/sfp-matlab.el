@@ -4,7 +4,7 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/Build/matlab-emacs")
+(add-to-list 'load-path "~/.emacs.d/el/matlab-emacs")
 (require 'matlab-load)
 
 (provide 'sfp-matlab)

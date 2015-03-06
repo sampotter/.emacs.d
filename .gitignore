@@ -1,4 +1,6 @@
 session.*
+.session
+*.elc
 *~
 .#*
 .session
@@ -10,6 +12,7 @@ srecode-map.el
 tramp
 tatu
 el/cedet/
+el/column-enforce-mode/
 el/matlab-emacs/
 el/p4.el/
 el/*.el
