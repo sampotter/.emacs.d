@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (install-package-if-necessary 'jabber)
 
 (setq jabber-chat-buffer-show-avatar nil
@@ -13,3 +19,4 @@
 			     (:connection-type . network))))
 
 (provide 'sfp-jabber)
+;;; sfp-jabber.el ends here

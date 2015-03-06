@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (defvar *keybinding-list*
   (list
    (list (kbd "C-S-l") 'recenter-left-right)
@@ -36,3 +42,4 @@
 	*keybinding-list*)
 
 (provide 'sfp-keybindings)
+;;; sfp-keybindings.el ends here

@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (define-skeleton c-include-guard-skeleton
   "Inserts a C include guard."
   "Name of include guard: "
@@ -43,3 +49,4 @@
 
 
 (provide 'sfp-skeletons)
+;;; sfp-skeletons.el ends here

@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (require 'python)
 
 (let ((interpreter-args
@@ -21,3 +27,4 @@
 	python-shell-completion-string-code completion-string-code))
 
 (provide 'sfp-python)
+;;; sfp-python.el ends here

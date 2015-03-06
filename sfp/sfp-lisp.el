@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (install-package-if-necessary 'slime)
 (install-package-if-necessary 'paredit) 
 
@@ -16,4 +22,5 @@
 (add-hook 'scheme-mode-hook #'enable-paredit-mode)
 
 (provide 'sfp-lisp)
+;;; sfp-lisp.el ends here
 

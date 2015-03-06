@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (install-package-if-necessary 'ggtags)
 
 (add-hook 'c-mode-common-hook
@@ -15,3 +21,4 @@
 (global-set-key (kbd "M->") 'end-of-buffer)
 
 (provide 'sfp-ggtags)
+;;; sfp-ggtags.el ends here

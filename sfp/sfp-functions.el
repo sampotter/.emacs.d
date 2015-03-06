@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (defun system-type-is-gnu () (equal system-type 'gnu))
 (defun system-type-is-gnu-linux () (equal system-type 'gnu/linux))
 (defun system-type-is-gnu-kfreebsd () (equal system-type 'gnu/kfreebsd))
@@ -19,3 +25,4 @@
 			 (/ (window-width) 2))))
 
 (provide 'sfp-functions)
+;;; sfp-functions.el ends here

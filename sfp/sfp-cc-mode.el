@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 (setq load-path
@@ -10,3 +16,4 @@
       c-basic-offset 4)
 
 (provide 'sfp-cc-mode)
+;;; sfp-cc-mode.el ends here

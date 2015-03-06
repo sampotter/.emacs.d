@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (setf term-mode-hook
       (lambda ()
 	(interactive)
@@ -5,3 +11,4 @@
 	(term-pager-enable)))
 
 (provide 'sfp-term)
+;;; sfp-term.el ends here

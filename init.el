@@ -25,7 +25,6 @@
 (require 'sfp-ess)
 (require 'sfp-flycheck)
 (require 'sfp-ggtags)
-(require 'sfp-gnus)
 (require 'sfp-haskell)
 (require 'sfp-jabber)
 (require 'sfp-latex)

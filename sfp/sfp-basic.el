@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Some miscellaneous settings.
 
@@ -58,3 +64,4 @@
 (setq-default indent-tabs-mode nil)
 
 (provide 'sfp-basic)
+;;; sfp-basic.el ends here
