@@ -1,8 +1,12 @@
 session.*
 *~
 .#*
+.session
+abbrev_defs
 elpa
 eshell
+semanticdb
+srecode-map.el
 tramp
 tatu
 el/cedet/
