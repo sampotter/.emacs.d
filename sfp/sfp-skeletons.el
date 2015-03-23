@@ -47,6 +47,17 @@
   > "|-+-|" > \n
   > "| Achieved? | |" > \n)
 
+(define-skeleton el-file-skeleton
+  "Inserts a template el file, with appropriate header and footer."
+  "What is the name of the package to provide? "
+  > ";;; package --- Summary:" \n
+  > ";;; Commentary:" \n
+  > ";;; Code:" \n
+  > \n
+  > \n
+  > \n
+  > "(provide '" str ")" \n
+  > ";;; " str ".el ends here" \n)
 
 (provide 'sfp-skeletons)
 ;;; sfp-skeletons.el ends here

@@ -97,17 +97,11 @@
       (install-package-if-necessary package)
     (error (concat "Unable to install package " (symbol-name package)))))
 
-
-
-; (load-theme 'basic t)
-; (load-theme 'stekene-light t)
-; (load-theme 'stekene-dark t)
-; (load-theme 'whiteboard t)
-(load-theme 'underwater-theme t)
+(load-theme 'leuven t)
 
 (when window-system
   (defvar font-use-system-font t)
-  (set-face-attribute 'default nil :height 120))
+  (set-face-attribute 'default nil :height 110))
 
 (mapc (lambda (pair) (add-to-list 'default-frame-alist pair))
       (list '(width . 80)

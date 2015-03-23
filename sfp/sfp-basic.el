@@ -51,7 +51,7 @@
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
+;; ...?
 
 (when (or (system-type-is-darwin)
 	  (system-type-is-windows-nt))
@@ -59,9 +59,9 @@
   (exec-path-from-shell-initialize))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Use spaces instead of tabs...
+;; Changing tab settings...
 
-(setq-default indent-tabs-mode nil)
+(set-default 'tab-width 4)
 
 (provide 'sfp-basic)
 ;;; sfp-basic.el ends here
