@@ -6,7 +6,14 @@
 
 (defvar *keybinding-list*
   (list
+   ;; Better compilation
+   (list (kbd "<f5>") (lambda ()
+						(interactive)
+						(setq-local compilation-read-command nil)
+						(call-interactively 'compile)))
+   ;; LR recentering
    (list (kbd "C-S-l") 'recenter-left-right)
+   ;; Hack to get window select to work
    (list (kbd "M-1") (lambda ()
 		       (interactive)
 		       (window-number-select 1)))
@@ -36,10 +43,25 @@
 		       (window-number-select 9)))
    (list (kbd "M-0") (lambda ()
 		       (interactive)
-		       (window-number-select 10)))))
+		       (window-number-select 10)))
+   (list (case window-system
+	   (t (kbd "C-s-f")))
+	 (lambda ()
+	   (interactive)
+	   (toggle-frame-fullscreen)))
+   (list (kbd "s-m") #'suspend-frame)
+   (list (kbd "s-n") #'make-frame)
+   (list (kbd "s-w") #'delete-frame)
+   (list (kbd "s-c") #'kill-ring-save)
+   (list (kbd "s-v") #'yank)
+   (list (kbd "s-x") #'kill-region)))
 
-(mapcar (lambda (args) (apply #'global-set-key args))
-	*keybinding-list*)
+(case window-system
+  (osx 'hi)
+  (t 1))
+
+(dolist (keybinding *keybinding-list*)
+  (apply #'global-set-key keybinding))
 
 (provide 'sfp-keybindings)
 ;;; sfp-keybindings.el ends here

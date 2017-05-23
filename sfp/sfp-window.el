@@ -2,106 +2,66 @@
 
 ;;; Commentary:
 
-;; Get rid of extra GUI widgets.
-
 ;;; Code:
 
+;; Get rid of extra GUI widgets.
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(defvar theme-packages
-  (list
-   'afternoon-theme
-   'ahungry-theme
-   'alect-theme
-   'ample-theme
-   'anti-zenburn-theme
-   'atom-dark-theme
-   'badger-theme
-   'base16-theme
-   'basic-theme
-   'bliss-theme
-   'boron-theme
-   'busybee-theme
-   'colonoscopy-theme
-   'cyberpunk-theme
-   'dakrone-theme
-   'darcula-theme
-   'dark-krystal-theme
-   'darkburn-theme
-   'darkmine-theme
-   'display-theme
-   'eclipse-theme
-   'espresso-theme
-   'firebelly-theme
-   'firecode-theme
-   'flatui-theme
-   'gotham-theme
-   'grandshell-theme
-   'gruvbox-theme
-   'hc-zenburn-theme
-   'helm-theme
-   'hemisu-theme
-   'hipster-theme
-   'inkpot-theme
-   'jazz-theme
-   'late-night-theme
-   'lavender-theme
-   'leuven-theme
-   'light-soap-theme
-   'lush-theme
-   'mbo70s-theme
-   'mellow-theme
-   'minimal-theme
-   'moe-theme
-   'molokai-theme
-   'monochrome-theme
-   'mustang-theme
-   'mustard-theme
-   'naquadah-theme
-   'niflheim-theme
-   'noctilux-theme
-   'obsidian-theme
-   'occidental-theme
-   'oldlace-theme
-   'org-beautify-theme
-   'peacock-theme
-   'planet-theme
-   'professional-theme
-   'railscasts-theme
-   'remember-theme
-   'reverse-theme
-   'seti-theme
-   'slime-theme
-   'smyx-theme
-   'soft-morning-theme
-   'soft-stone-theme
-   'subatomic-theme
-   'subatomic256-theme
-   'sublime-theme
-   'sunny-day-theme
-   'tango-plus-theme
-   'tangotango-theme
-   'ubuntu-theme
-   'underwater-theme
-   'waher-theme
-   'warm-night-theme
-   'xresources-theme
-   'yoshi-theme
-   'zonokai-theme)
-  "List of packages for each theme that we would like to have available.")
+(mapc #'install-package-if-necessary
+	  '(avk-emacs-themes
+		greymatters-theme
+		leuven-theme
+		monochrome-theme
+		peacock-theme
+		phoenix-dark-mono-theme
+		punpun-theme
+		solarized-theme
+		tao-theme))
 
-(dolist (package theme-packages)
-  (condition-case nil
-      (install-package-if-necessary package)
-    (error (concat "Unable to install package " (symbol-name package)))))
-
-(load-theme 'leuven t)
+(defvar *light-theme* 'punpun-light)
+(defvar *dark-theme* 'punpun-dark)
+(defvar *light-color-theme*
+  (if (equal (system-name) "Sams-iMac.local")
+	  'adwaita
+	  'solarized-light))
+(defvar *dark-color-theme* 'solarized-dark)
+(defvar *default-theme* *light-color-theme*)
+(defvar *current-theme* nil)
 
 (when window-system
-  (defvar font-use-system-font t)
-  (set-face-attribute 'default nil :height 110))
+  (defun change-theme (new-theme)
+	(interactive)
+	(when *current-theme*
+	  (disable-theme *current-theme*))
+	(setq *current-theme* new-theme)
+	(when new-theme
+	  (load-theme new-theme t)))
+  (defun light-theme ()
+	(interactive)
+	(change-theme *light-theme*))
+  (defun dark-theme ()
+	(interactive)
+	(change-theme *dark-theme*))
+  (defun light-color-theme ()
+	(interactive)
+	(change-theme *light-color-theme*))
+  (defun dark-color-theme ()
+	(interactive)
+	(change-theme *dark-color-theme*))
+  (cond
+   ((window-system-is-mac)
+	(set-frame-font "Fira Mono 13" :frames t))
+   ((window-system-is-x)
+	(set-frame-font "Ubuntu Mono" :frames t))
+   (t (error "Unknown window system when setting font")))
+  (cond
+   ((eq *default-theme* *light-theme*) (light-theme))
+   ((eq *default-theme* *dark-theme*) (dark-theme))
+   ((eq *default-theme* *light-color-theme*) (light-color-theme))
+   ((eq *default-theme* *dark-color-theme*) (dark-color-theme))
+   (t (error "Invalid default theme"))))
 
 (mapc (lambda (pair) (add-to-list 'default-frame-alist pair))
       (list '(width . 80)

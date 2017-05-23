@@ -1,3 +1,11 @@
+el/*
+info/*
+custom-file.el
+.emacs.desktop
+GTAGS
+GRTAGS
+GPATH
+.DS_Store
 session.*
 .session
 *.elc

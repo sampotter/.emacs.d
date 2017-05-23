@@ -4,25 +4,38 @@
 
 ;;; Code:
 
-(defun system-type-is-gnu () (equal system-type 'gnu))
-(defun system-type-is-gnu-linux () (equal system-type 'gnu/linux))
-(defun system-type-is-gnu-kfreebsd () (equal system-type 'gnu/kfreebsd))
-(defun system-type-is-darwin () (equal system-type 'darwin))
-(defun system-type-is-ms-dos () (equal system-type 'ms-dos))
-(defun system-type-is-windows-nt () (equal system-type 'windows-nt))
-(defun system-type-is-cygwin () (equal system-type 'cygwin))
+(defun window-system-is-mac ()
+  (or (equal window-system 'mac)
+	  (equal window-system 'ns)))
+
+(defun window-system-is-x ()
+  (equal window-system 'x))
 
 (defun have-internet-connection-p ()
+  "Try to determine if there is an internet connection."
   (let* ((command "ping -c 1 www.google.com")
 	 (output (shell-command-to-string command)))
-    (eql (substring output 0 13) "ping: unknown")))
+    (not (eql (substring output 0 13) "ping: unknown"))))
 
 (defun recenter-left-right ()
   "Center the window horizontally about the point."
   (interactive)
   (set-window-hscroll (selected-window)
-		      (- (current-column)
-			 (/ (window-width) 2))))
+					  (- (current-column)
+						 (/ (window-width) 2))))
+
+;; Got this from here:
+;; 
+;; http://stackoverflow.com/questions/21486934/file-specific-key-binding-in-emacs
+;;
+;; In order to set "file-local keybindings" (kinda)
+(defun buffer-local-set-key (key command)
+  (let ((old (current-local-map))
+        (new (make-sparse-keymap)))
+    (when old
+      (set-keymap-parent new old))
+    (define-key new key command)
+    (use-local-map new)))
 
 (provide 'sfp-functions)
 ;;; sfp-functions.el ends here
