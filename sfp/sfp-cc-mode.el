@@ -2,8 +2,6 @@
 
 ;;; Code:
 
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
 (defun followed-by (cases)
   (cond ((null cases) nil)
         ((assq (car cases) 

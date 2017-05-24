@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
+(defvar dired-use-ls-dired)
 (setf dired-use-ls-dired nil)
 
 (require 'dired-x)
@@ -17,8 +18,8 @@
 							 "^\\._") ; OS X ._ files
 						   "\\|"))
 
-(install-package-if-necessary 'diredful)
-(diredful-mode 1)
+;; (install-package-if-necessary 'diredful)
+;; (diredful-mode 1)
 
 (provide 'sfp-dired)
 ;;; sfp-dired.el ends here

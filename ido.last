@@ -1,0 +1,49 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/sfp/.emacs.d/" . "sfp/")
+ ("/Users/sfp/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/sfp/.emacs.d/sfp/"
+ "/Users/sfp/Projects/pascal/c/"
+ "/Users/sfp/.emacs.d/"
+ "/Users/sfp/Projects/pascal/"
+ "/Users/sfp/Projects/pascal/jl/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "sfp-matlab.el"
+ "sfp-dired.el"
+ "def.h"
+ "init.el"
+ "todo.org"
+ "sfp-window.el"
+ "Makefile"
+ "pascal.native.jl"
+ "sfp-keybindings.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/sfp/.emacs.d/sfp/" (22820 34438 0 0) "sfp-window.el" "sfp-wanderlust.el" "sfp-w3.el" "sfp-virtualenvwrapper.el" "sfp-transpose.el" "sfp-text-editing.el" "sfp-term.el" "sfp-supercollider.el" "sfp-sr-speedbar.el" "sfp-skeletons.el" "sfp-session.el" "sfp-scheme.el" "sfp-rust.el" "sfp-python.el" "sfp-packages.el" "sfp-p4.el" "sfp-osx.el" "sfp-org-mode.el" "sfp-opencl.el" "sfp-ocaml.el" "sfp-objective-c.el" "sfp-nasm.el" "sfp-mu4e.el" "sfp-midnight.el" "sfp-matlab.el" "sfp-man.el" "sfp-magit.el" "sfp-lua.el" "sfp-llvm.el" "sfp-lisp.el" "sfp-latex.el" "sfp-keybindings.el" "sfp-julia.el" "sfp-jira.el" "sfp-jabber.el" "sfp-irony.el" "sfp-interactive.el" "sfp-info.el" "sfp-ido.el" "sfp-haskell.el" "sfp-graphviz.el" "sfp-glsl.el" "sfp-ggtags.el" "sfp-gdb.el" "sfp-functions.el" "sfp-flycheck.el" "sfp-ess.el" "sfp-eshell.el" "sfp-elisp.el" "sfp-ein.el" "sfp-dired.el" "sfp-desktop.el" "sfp-d.el" "sfp-cygwin.el" "sfp-cuda.el" "sfp-company.el" "sfp-cmake.el" "sfp-chess.el" "sfp-cedet.el" "sfp-cc-mode.el" "sfp-calfw.el" "sfp-basic.el" "sfp-autocomplete.el" "sfp-auctex.el" "sfp-advice.el" "../" "./")
+
+ ("/Users/sfp/.emacs.d/" (22820 34501 0 0) "sfp/" "semanticdb/" "projects/" "network-security.data" "init.el" "ido.last" "eshell/" "elpa/" "el/" "custom-file.el" "auto-save-list/" "abbrev_defs" ".session" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/sfp/" (22820 34471 0 0) "ssdtPRGen.sh" "Public/" "Projects/" "Pictures/" "pCloud Drive/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "disjointset.py" "Desktop/" "Build/" ".wget-hsts" ".viminfo" ".Trash/" ".pcloud/" ".julia_history" ".gitconfig" ".emacs.d/" ".DS_Store" ".cmake/" ".CFUserTextEncoding" ".bashrc~" ".bash_sessions/" ".bash_history" "../" "./")
+
+ ("/Users/sfp/Projects/pascal/c/" (22820 33130 0 0) "timer.h" "timer.c" "plandict.test.c" "plandict.h" "plandict.c" "pascal.ser.c" "pascal.par.test.c" "pascal.par.c" "pascal.h" "dict.test.c" "dict.h" "dict.c" "def.h" "../" "./")
+
+ ("/Users/sfp/Projects/" (22820 25703 0 0) "pascal/" "../" "./")
+
+ ("/Users/sfp/Projects/pascal/jl/" (22820 25703 0 0) "pascal.test.jl" "pascal.P_mult_par_timing.jl" "pascal.native.jl" "pascal.jl" "pascal.gen_timing_data.jl" "pascal.gen_rel_error_data.jl" "pascal.gen.jl" "pascal.estimate_costs.jl" "pascal.E_mult_timing.jl" "macro_util.jl" "../" "./")
+
+ ("/Users/sfp/Projects/pascal/" (22820 25712 0 0) "todo.org" "tex/" "test/" "py/" "Makefile" "m/" "jl/" "ipe/" "c/" "build/" ".gitignore" ".git/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

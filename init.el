@@ -5,7 +5,7 @@
 ;; Should I do this?
 ;; (set-language-environment "utf-8")
 
-(require 'cl)
+(require 'cl-lib)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; These functions need to be defined first so that we can figure out platform
@@ -72,16 +72,17 @@
 		  (t "~/Share")))))
 
 (defconst *sfp-emacs-dir*
-  (expand-file-name
-   (file-name-as-directory (concat *sfp-dropbox-dir* "emacs"))))
+  (cond ((equal (system-name) "Sams-iMac.local") "~/.emacs.d/")
+		(t (expand-file-name
+			(file-name-as-directory (concat *sfp-dropbox-dir* "emacs"))))))
 
 ; (load-file (concat *sfp-emacs-dir* "el/cedet/cedet-devel-load.el"))
 
 (add-to-list 'load-path (concat *sfp-emacs-dir* "el"))
 (add-to-list 'load-path (concat *sfp-emacs-dir* "sfp"))
-(add-to-list 'load-path (concat *sfp-emacs-dir* "el/use-package"))
+; (add-to-list 'load-path (concat *sfp-emacs-dir* "el/use-package"))
 
-(require 'use-package)
+; (require 'use-package)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Starting the Emacs server conditionally:
@@ -92,7 +93,8 @@
 ;; Customize-related configuration follows.
 
 (setf custom-file (concat *sfp-emacs-dir* "custom-file.el"))
-(load custom-file)
+(when (file-exists-p custom-file)
+  (load custom-file))
 
 ;; TODO: add testing -- would be good to have an elisp function which verifies
 ;; that all of the packages which are provided are required here.
@@ -136,7 +138,7 @@
 (require 'sfp-haskell)
 (require 'sfp-ido)
 (require 'sfp-info)
-(require 'sfp-irony)
+;; (require 'sfp-irony)
 (require 'sfp-jabber)
 (require 'sfp-latex)
 (require 'sfp-lisp)

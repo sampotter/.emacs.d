@@ -44,8 +44,8 @@
    (list (kbd "M-0") (lambda ()
 		       (interactive)
 		       (window-number-select 10)))
-   (list (case window-system
-	   (t (kbd "C-s-f")))
+   (list (pcase window-system
+	   ('ns (kbd "C-s-f")))
 	 (lambda ()
 	   (interactive)
 	   (toggle-frame-fullscreen)))
@@ -55,10 +55,6 @@
    (list (kbd "s-c") #'kill-ring-save)
    (list (kbd "s-v") #'yank)
    (list (kbd "s-x") #'kill-region)))
-
-(case window-system
-  (osx 'hi)
-  (t 1))
 
 (dolist (keybinding *keybinding-list*)
   (apply #'global-set-key keybinding))

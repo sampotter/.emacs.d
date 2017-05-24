@@ -52,7 +52,7 @@
 	(change-theme *dark-color-theme*))
   (cond
    ((window-system-is-mac)
-	(set-frame-font "Fira Mono 13" :frames t))
+	(set-frame-font "Fira Mono 12" :frames t))
    ((window-system-is-x)
 	(set-frame-font "Ubuntu Mono" :frames t))
    (t (error "Unknown window system when setting font")))
