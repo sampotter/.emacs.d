@@ -5,6 +5,13 @@
 ;; Should I do this?
 ;; (set-language-environment "utf-8")
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (require 'cl-lib)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -71,10 +78,12 @@
 		  ((equal system-type 'darwin) "/Volumes/Molly/Share")
 		  (t "~/Share")))))
 
-(defconst *sfp-emacs-dir*
-  (cond ((equal (system-name) "Sams-iMac.local") "~/.emacs.d/")
-		(t (expand-file-name
-			(file-name-as-directory (concat *sfp-dropbox-dir* "emacs"))))))
+(defconst *sfp-emacs-dir* "~/.emacs.d/")
+
+; (defconst *sfp-emacs-dir*
+;   (cond ((equal (system-name) "Sams-iMac.local") "~/.emacs.d/")
+; 		(t (expand-file-name
+; 			(file-name-as-directory (concat *sfp-dropbox-dir* "emacs"))))))
 
 ; (load-file (concat *sfp-emacs-dir* "el/cedet/cedet-devel-load.el"))
 
@@ -122,7 +131,7 @@
 (require 'sfp-cc-mode)
 (require 'sfp-chess)
 (require 'sfp-cmake)
-(require 'sfp-company)
+;; (require 'sfp-company)
 (require 'sfp-cuda)
 (require 'sfp-d)
 ;; (require 'sfp-desktop)
@@ -131,9 +140,9 @@
 (require 'sfp-elisp)
 (require 'sfp-julia)
 (require 'sfp-ess)
-(require 'sfp-flycheck)
+;; (require 'sfp-flycheck)
 (require 'sfp-gdb)
-(require 'sfp-ggtags)
+;; (require 'sfp-ggtags)
 (require 'sfp-glsl)
 (require 'sfp-haskell)
 (require 'sfp-ido)
@@ -141,7 +150,7 @@
 ;; (require 'sfp-irony)
 (require 'sfp-jabber)
 (require 'sfp-latex)
-(require 'sfp-lisp)
+;; (require 'sfp-lisp)
 (require 'sfp-lua)
 (require 'sfp-magit)
 (require 'sfp-matlab)

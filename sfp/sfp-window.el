@@ -11,6 +11,7 @@
 
 (mapc #'install-package-if-necessary
 	  '(avk-emacs-themes
+		eink-theme
 		greymatters-theme
 		leuven-theme
 		monochrome-theme
@@ -20,14 +21,14 @@
 		solarized-theme
 		tao-theme))
 
-(defvar *light-theme* 'punpun-light)
+(defvar *light-theme* 'eink)
 (defvar *dark-theme* 'punpun-dark)
 (defvar *light-color-theme*
   (if (equal (system-name) "Sams-iMac.local")
 	  'adwaita
 	  'solarized-light))
 (defvar *dark-color-theme* 'solarized-dark)
-(defvar *default-theme* *light-color-theme*)
+(defvar *default-theme* *light-theme*)
 (defvar *current-theme* nil)
 
 (when window-system
@@ -52,7 +53,7 @@
 	(change-theme *dark-color-theme*))
   (cond
    ((window-system-is-mac)
-	(set-frame-font "Fira Mono 12" :frames t))
+	(set-frame-font "Fira Mono 11" :frames t))
    ((window-system-is-x)
 	(set-frame-font "Ubuntu Mono" :frames t))
    (t (error "Unknown window system when setting font")))

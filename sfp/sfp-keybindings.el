@@ -45,7 +45,7 @@
 		       (interactive)
 		       (window-number-select 10)))
    (list (pcase window-system
-	   ('ns (kbd "C-s-f")))
+	   ('ns (kbd "<f9>")))
 	 (lambda ()
 	   (interactive)
 	   (toggle-frame-fullscreen)))
