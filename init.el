@@ -142,7 +142,7 @@
 (require 'sfp-ess)
 ;; (require 'sfp-flycheck)
 (require 'sfp-gdb)
-;; (require 'sfp-ggtags)
+(require 'sfp-ggtags)
 (require 'sfp-glsl)
 (require 'sfp-haskell)
 (require 'sfp-ido)
