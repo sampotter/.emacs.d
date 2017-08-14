@@ -57,11 +57,13 @@
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ...?
+;; Copy environment variables from Bash.
 
 (when (system-type-is-darwin)
   (install-package-if-necessary 'exec-path-from-shell)
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "GTAGSCONF")
+  (exec-path-from-shell-copy-env "GTAGSLABEL"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Changing tab settings...
