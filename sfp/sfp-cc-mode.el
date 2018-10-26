@@ -14,13 +14,12 @@
 
 (c-add-style
  "sfp"
- '((c-offsets-alist
-	(innamespace . (lambda (x)
-					 (if (followed-by '(innamespace namespace-close))
-						 0
-					   '+))))))
+ '((c-offsets-alist (innamespace . 0))))
 
 (setq c-default-style "sfp")
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/rtags")
+(require 'rtags)
 
 (provide 'sfp-cc-mode)
 ;;; sfp-cc-mode.el ends here

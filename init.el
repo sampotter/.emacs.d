@@ -5,7 +5,6 @@
 ;; Should I do this?
 ;; (set-language-environment "utf-8")
 
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -75,7 +74,7 @@
     (cond ((equal (system-name) "Sams-iMac.local") "~/pCloud Drive")
 		  ((equal system-type 'windows-nt) "D:/Share")
 		  ((equal system-type 'gnu/linux) "~/Share")
-		  ((equal system-type 'darwin) "/Volumes/Molly/Share")
+		  ((equal system-type 'darwin) "/Volumes/Molly/Dropbox")
 		  (t "~/Share")))))
 
 (defconst *sfp-emacs-dir* "~/.emacs.d/")
@@ -139,6 +138,7 @@
 (require 'sfp-ein)
 (require 'sfp-elisp)
 (require 'sfp-julia)
+(require 'sfp-eshell)
 (require 'sfp-ess)
 ;; (require 'sfp-flycheck)
 (require 'sfp-gdb)
@@ -163,13 +163,16 @@
 (require 'sfp-org-mode)
 (require 'sfp-osx)
 ;; (require 'sfp-p4)
+(require 'sfp-pdf)
 (require 'sfp-python)
 (require 'sfp-realgud)
 (require 'sfp-rust)
+(require 'sfp-sublimity)
 (require 'sfp-scheme)
 (require 'sfp-skeletons)
 (require 'sfp-sr-speedbar)
 (require 'sfp-supercollider)
+(require 'sfp-tramp)
 (require 'sfp-virtualenvwrapper)
 (require 'sfp-w3)
 ;; (require 'sfp-wanderlust)

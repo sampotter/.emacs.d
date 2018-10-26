@@ -1,3 +1,5 @@
+network-security.data
+bookmarks
 ido.last
 el/*
 info/*
@@ -26,3 +28,4 @@ el/matlab-emacs/
 el/p4.el/
 el/*.el
 url/
+SessionDesktop.el

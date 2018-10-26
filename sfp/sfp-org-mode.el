@@ -14,8 +14,8 @@
 (global-set-key (kbd "C-c M-n") 'org-move-item-down)
 (global-set-key (kbd "C-c M-p") 'org-move-item-up)
 
-(defvar org-directory (concat *sfp-dropbox-dir* "/org"))
-(defvar org-default-notes-file (concat org-directory "/capture.org"))
+(setq org-directory (file-name-as-directory (concat *sfp-dropbox-dir* "/org")))
+(setq org-default-notes-file (concat org-directory "/capture.org"))
 
 (setq org-capture-templates
   '(("t" "Todo" entry (file+headline org-default-notes-file "Tasks")

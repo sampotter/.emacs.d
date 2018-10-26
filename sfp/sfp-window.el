@@ -19,16 +19,14 @@
 		phoenix-dark-mono-theme
 		punpun-theme
 		solarized-theme
-		tao-theme))
+		tao-theme
+		ubuntu-theme))
 
 (defvar *light-theme* 'eink)
 (defvar *dark-theme* 'punpun-dark)
-(defvar *light-color-theme*
-  (if (equal (system-name) "Sams-iMac.local")
-	  'adwaita
-	  'solarized-light))
-(defvar *dark-color-theme* 'solarized-dark)
-(defvar *default-theme* *light-theme*)
+(defvar *light-color-theme* 'whiteboard)
+(defvar *dark-color-theme* 'deeper-blue)
+(defvar *default-theme* *dark-color-theme*)
 (defvar *current-theme* nil)
 
 (when window-system
@@ -53,7 +51,7 @@
 	(change-theme *dark-color-theme*))
   (cond
    ((window-system-is-mac)
-	(set-frame-font "Fira Mono 12" :frames t))
+	(set-frame-font "Menlo 11" :frames t))
    ((window-system-is-x)
 	(set-frame-font "Ubuntu Mono" :frames t))
    (t (error "Unknown window system when setting font")))

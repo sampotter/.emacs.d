@@ -6,9 +6,15 @@
 
 (require 'python)
 
+(install-package-if-necessary 'cython-mode)
+
+(when (system-type-is-darwin)
+  (setenv "ETS_TOOLKIT" "qt4")
+  (setenv "QT_API" "pyqt5"))
+
 (let ((interpreter-args
        (concat (cond ((system-type-is-darwin)
-					  "-i")
+					  "-i --gui=qt5")
 					 ((or (system-type-is-gnu)
 						  (system-type-is-gnu-linux)
 						  (system-type-is-gnu-kfreebsd))
@@ -20,7 +26,7 @@
       (completion-module-string-code "';'.join(module_completion('''%s'''))\n")
       (completion-string-code
        "';'.join(get_ipython().Completer.all_completions('''%s'''))\n"))
-  (setq python-shell-interpreter "ipython"
+  (setq python-shell-interpreter "ipython3"
 		python-shell-interpreter-args interpreter-args
 		python-shell-prompt-regexp "In \\[[0-9]+\\]: "
 		python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "

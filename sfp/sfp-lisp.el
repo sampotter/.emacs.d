@@ -4,6 +4,8 @@
 
 ;;; Code:
 
+(install-package-if-necessary 'slime)
+
 (add-to-list 'load-path (concat *sfp-emacs-dir* "el/slime"))
 (require 'slime-autoloads)
 (setq slime-contribs '(slime-fancy)
