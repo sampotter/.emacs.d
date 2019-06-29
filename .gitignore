@@ -29,3 +29,7 @@ el/p4.el/
 el/*.el
 url/
 SessionDesktop.el
+*.dat
+games
+request
+transient

@@ -5,27 +5,13 @@
 ;;; Code:
 
 (install-package-if-necessary 'slime)
-
-(add-to-list 'load-path (concat *sfp-emacs-dir* "el/slime"))
 (require 'slime-autoloads)
-(setq slime-contribs '(slime-fancy)
-	  slime-net-coding-system 'utf-8-unix)
+(add-to-list 'slime-contribs 'slime-fancy)
+
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
 
 (install-package-if-necessary 'slime-company)
 (slime-setup '(slime-company))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Setting up the list of implementations.
-
-(setq slime-lisp-implementations
-	  (cl-labels ((get-lisp-path (cmd-name)
-							  (trim-string (shell-command-to-string cmd-name))))
-		(let ((ccl-path (get-lisp-path "which ccl64"))
-			  (quicklisp-path (concat *sfp-dropbox-dir* "quicklisp.lisp"))
-			  (sbcl-path (get-lisp-path "which sbcl")))
-		  `((ccl64 (,ccl-path "--load" ,quicklisp-path))
-			(sbcl (,sbcl-path "--load" ,quicklisp-path)
-				  :coding-system utf-8-unix)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use paredit-mode.

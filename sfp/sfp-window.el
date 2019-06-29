@@ -10,7 +10,8 @@
 (scroll-bar-mode -1)
 
 (mapc #'install-package-if-necessary
-	  '(avk-emacs-themes
+	  '(base16-theme
+		avk-emacs-themes
 		eink-theme
 		greymatters-theme
 		leuven-theme
@@ -22,11 +23,9 @@
 		tao-theme
 		ubuntu-theme))
 
-(defvar *light-theme* 'eink)
-(defvar *dark-theme* 'punpun-dark)
-(defvar *light-color-theme* 'whiteboard)
-(defvar *dark-color-theme* 'deeper-blue)
-(defvar *default-theme* *dark-color-theme*)
+(defvar *light-theme* 'base16-grayscale-light)
+(defvar *dark-theme* 'base16-grayscale-dark)
+(defvar *default-theme* *light-theme*)
 (defvar *current-theme* nil)
 
 (when window-system
@@ -43,15 +42,9 @@
   (defun dark-theme ()
 	(interactive)
 	(change-theme *dark-theme*))
-  (defun light-color-theme ()
-	(interactive)
-	(change-theme *light-color-theme*))
-  (defun dark-color-theme ()
-	(interactive)
-	(change-theme *dark-color-theme*))
   (cond
    ((window-system-is-mac)
-	(set-frame-font "Menlo 11" :frames t))
+	(set-frame-font "Menlo 12" :frames t))
    ((window-system-is-x)
 	(set-frame-font "Ubuntu Mono" :frames t))
    (t (error "Unknown window system when setting font")))

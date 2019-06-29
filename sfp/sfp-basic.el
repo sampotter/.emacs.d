@@ -82,3 +82,8 @@
 
 (provide 'sfp-basic)
 ;;; sfp-basic.el ends here
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Delete trailing whitespace when saving files.
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)

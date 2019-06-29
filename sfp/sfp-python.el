@@ -6,6 +6,15 @@
 
 (require 'python)
 
+(install-package-if-necessary 'pythonic)
+
+; TODO: comment this out until we get it working...
+;; (install-package-if-necessary 'conda)
+;; (conda-env-initialize-interactive-shells)
+;; (conda-env-initialize-eshell)
+;; (conda-env-autoactivate-mode t)
+;; (custom-set-variables '(conda-anaconda-home "~/miniconda3"))
+
 (install-package-if-necessary 'cython-mode)
 
 (when (system-type-is-darwin)
@@ -33,6 +42,9 @@
 		python-shell-completion-setup-code completion-setup-code
 		python-shell-completion-string-code completion-module-string-code
 		python-shell-completion-string-code completion-string-code))
+
+(setq python-indent-guess-indent-offset t)
+(setq python-indent-guess-indent-offset-verbose nil)
 
 (provide 'sfp-python)
 ;;; sfp-python.el ends here

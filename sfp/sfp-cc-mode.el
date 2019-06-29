@@ -18,8 +18,5 @@
 
 (setq c-default-style "sfp")
 
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/rtags")
-(require 'rtags)
-
 (provide 'sfp-cc-mode)
 ;;; sfp-cc-mode.el ends here
