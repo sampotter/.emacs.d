@@ -25,7 +25,7 @@
 						 (/ (window-width) 2))))
 
 ;; Got this from here:
-;; 
+;;
 ;; http://stackoverflow.com/questions/21486934/file-specific-key-binding-in-emacs
 ;;
 ;; In order to set "file-local keybindings" (kinda)
@@ -36,6 +36,11 @@
       (set-keymap-parent new old))
     (define-key new key command)
     (use-local-map new)))
+
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive)
+  (revert-buffer t t))
 
 (provide 'sfp-functions)
 ;;; sfp-functions.el ends here
