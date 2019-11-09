@@ -23,7 +23,7 @@
 		tao-theme
 		ubuntu-theme))
 
-(defvar *light-theme* 'base16-grayscale-light)
+(defvar *light-theme* 'base16-github)
 (defvar *dark-theme* 'base16-grayscale-dark)
 (defvar *default-theme* *light-theme*)
 (defvar *current-theme* nil)

@@ -11,6 +11,8 @@
 						(interactive)
 						(setq-local compilation-read-command nil)
 						(call-interactively 'compile)))
+   ;; Revert a file without the annoying confirmation
+   (list (kbd "<f6>") 'revert-buffer-no-confirm)
    ;; LR recentering
    (list (kbd "C-S-l") 'recenter-left-right)
    ;; Hack to get window select to work

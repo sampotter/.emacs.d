@@ -14,12 +14,12 @@
 (define-skeleton c-include-guard-skeleton
   "Inserts a C include guard."
   "Name of include guard: "
-  "#ifndef " str "_h" \n
-  "#define " str "_h" \n
+  "#ifndef __" str "_H__" \n
+  "#define __" str "_H__" \n
   \n
   _ \n
   \n
-  "#endif // " str "_h")
+  "#endif // __" str "_H__")
 
 (define-skeleton cpp-include-guard-skeleton
   "Inserts a C++ include guard."

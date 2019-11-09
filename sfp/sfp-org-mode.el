@@ -28,6 +28,9 @@
 (setq org-export-with-toc nil)
 (setq org-export-with-author nil)
 
+(setq org-mobile-inbox-for-pull "~/org/flagged.org")
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+
 (require 'ox-md)
 
 (provide 'sfp-org-mode)

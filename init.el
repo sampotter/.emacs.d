@@ -129,14 +129,14 @@
 
 (require 'sfp-auctex)
 (require 'sfp-cc-mode)
-(require 'sfp-chess)
+; (require 'sfp-chess)
 (require 'sfp-cmake)
+(require 'sfp-conda)
 (require 'sfp-cuda)
 (require 'sfp-d)
 (require 'sfp-dired)
 (require 'sfp-ein)
 (require 'sfp-elisp)
-(require 'sfp-julia)
 (require 'sfp-eshell)
 (require 'sfp-ess)
 (require 'sfp-gdb)
@@ -145,7 +145,8 @@
 (require 'sfp-haskell)
 (require 'sfp-ido)
 (require 'sfp-info)
-(require 'sfp-jabber)
+; (require 'sfp-jabber)
+; (require 'sfp-julia)
 (require 'sfp-latex)
 (require 'sfp-lisp)
 (require 'sfp-lua)
@@ -167,7 +168,7 @@
 (require 'sfp-supercollider)
 (require 'sfp-tramp)
 (require 'sfp-virtualenvwrapper)
-(require 'sfp-w3)
+; (require 'sfp-w3)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Project includes.
