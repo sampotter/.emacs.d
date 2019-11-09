@@ -23,7 +23,7 @@
 		tao-theme
 		ubuntu-theme))
 
-(defvar *light-theme* 'base16-grayscale-light)
+(defvar *light-theme* 'base16-github)
 (defvar *dark-theme* 'base16-grayscale-dark)
 (defvar *default-theme* *light-theme*)
 (defvar *current-theme* nil)
@@ -44,7 +44,7 @@
 	(change-theme *dark-theme*))
   (cond
    ((window-system-is-mac)
-	(set-frame-font "Menlo 13" :frames t))
+	(set-frame-font "Menlo 14" :frames t))
    ((window-system-is-x)
 	(set-frame-font "Ubuntu Mono" :frames t))
    (t (error "Unknown window system when setting font")))
