@@ -59,6 +59,12 @@
 		(t (error "GET-HOSTNAME unimplemented for current platform"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Use mdfind (spotlight) on macOS.
+
+(when (system-type-is-darwin)
+  (setq locate-command "mdfind"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Fixing up the load-path if we're using Homebrew's OS X Emacs.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -68,29 +74,25 @@
 ;; but this should probably be done instead by pcase'ing over the "hostname" (in
 ;; Linux terms).
 
-(defconst *sfp-dropbox-dir*
-  (expand-file-name
-   (file-name-as-directory
-    (cond ((equal (system-name) "Sams-iMac.local") "~/pCloud Drive")
-		  ((equal system-type 'windows-nt) "D:/Share")
-		  ((equal system-type 'gnu/linux) "~/Share")
-		  ((equal system-type 'darwin) "/Volumes/Molly/Dropbox")
-		  (t "~/Share")))))
+(require 'json)
+
+(defun get-darwin-dropbox-path ()
+  (let* ((json-object-type 'hash-table)
+		 (json-array-type 'list)
+		 (json-key-type 'string)
+		 (json (json-read-file "~/.dropbox/info.json")))
+	(gethash "path" (gethash "personal" json))))
+
+(defconst *sfp-dropbox-dir* (get-darwin-dropbox-path))
+
+(unless (system-type-is-darwin)
+  (error "Finding the Dropbox path on systems other than macOS
+  hasn't been implemented yet"))
 
 (defconst *sfp-emacs-dir* "~/.emacs.d/")
 
-; (defconst *sfp-emacs-dir*
-;   (cond ((equal (system-name) "Sams-iMac.local") "~/.emacs.d/")
-; 		(t (expand-file-name
-; 			(file-name-as-directory (concat *sfp-dropbox-dir* "emacs"))))))
-
-; (load-file (concat *sfp-emacs-dir* "el/cedet/cedet-devel-load.el"))
-
 (add-to-list 'load-path (concat *sfp-emacs-dir* "el"))
 (add-to-list 'load-path (concat *sfp-emacs-dir* "sfp"))
-; (add-to-list 'load-path (concat *sfp-emacs-dir* "el/use-package"))
-
-; (require 'use-package)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Starting the Emacs server conditionally:
