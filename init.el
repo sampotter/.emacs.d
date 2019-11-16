@@ -115,13 +115,10 @@
 (require 'sfp-keybindings)
 (require 'sfp-packages)
 (require 'sfp-basic)
-; (require 'sfp-cygwin)
 (require 'sfp-window)
 (require 'sfp-term)
 (require 'sfp-session)
-; (require 'sfp-cedet)
 (require 'sfp-man)
-(require 'sfp-midnight)
 (require 'sfp-text-editing)
 (require 'sfp-transpose)
 (require 'sfp-autocomplete)
@@ -131,7 +128,6 @@
 
 (require 'sfp-auctex)
 (require 'sfp-cc-mode)
-; (require 'sfp-chess)
 (require 'sfp-cmake)
 (require 'sfp-conda)
 (require 'sfp-cuda)
@@ -140,45 +136,22 @@
 (require 'sfp-ein)
 (require 'sfp-elisp)
 (require 'sfp-eshell)
-(require 'sfp-ess)
 (require 'sfp-gdb)
 (require 'sfp-ggtags)
 (require 'sfp-glsl)
-(require 'sfp-haskell)
 (require 'sfp-ido)
 (require 'sfp-info)
-; (require 'sfp-jabber)
-; (require 'sfp-julia)
 (require 'sfp-latex)
 (require 'sfp-lisp)
-(require 'sfp-lua)
 (require 'sfp-magit)
 (require 'sfp-markdown)
 (require 'sfp-matlab)
-(require 'sfp-nasm)
-(require 'sfp-ocaml)
-(require 'sfp-opencl)
 (require 'sfp-org-mode)
-(require 'sfp-osx)
 (require 'sfp-pdf)
 (require 'sfp-python)
-(require 'sfp-rust)
 (require 'sfp-sublimity)
-(require 'sfp-scheme)
 (require 'sfp-skeletons)
-(require 'sfp-sr-speedbar)
-(require 'sfp-supercollider)
 (require 'sfp-tramp)
-(require 'sfp-virtualenvwrapper)
-; (require 'sfp-w3)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Project includes.
-
-;; Vectorworks VGM iOS porting project.
-
-;; (add-to-list 'load-path (concat *sfp-emacs-dir* "projects/mobileport"))
-;; (require 'mobileport-refactoring)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Restore the previous desktop

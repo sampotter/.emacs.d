@@ -4,6 +4,10 @@
 
 ;;; Code:
 
+(when (system-type-is-darwin)
+  (setf mac-command-modifier 'super)
+  (setf mac-option-modifier 'meta))
+
 (defvar *keybinding-list*
   (list
    ;; Better compilation
