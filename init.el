@@ -59,7 +59,7 @@
 		(t (error "GET-HOSTNAME unimplemented for current platform"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Use mdfind (spotlight) on macOS.
+;; Use mdfind (spotlight) for locate on macOS.
 
 (when (system-type-is-darwin)
   (setq locate-command "mdfind"))
