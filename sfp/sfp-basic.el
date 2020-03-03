@@ -36,6 +36,7 @@
 (add-to-list 'load-path (concat *sfp-emacs-dir* "el/column-enforce-mode"))
 (require 'column-enforce-mode)
 (add-hook 'prog-mode-hook 'column-enforce-mode)
+(setq column-enforce-comments nil)
 
 ;; Highlight TODO, FIXME, and BUG in programming modes.
 (add-hook 'prog-mode-hook
