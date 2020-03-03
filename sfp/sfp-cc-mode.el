@@ -16,7 +16,7 @@
  "sfp"
  '((c-offsets-alist (innamespace . 0))))
 
-(add-hook 'c-mode-hook
+(add-hook 'c-mode-common-hook
 		  (lambda ()
 			(c-toggle-comment-style -1)
 			(c-set-offset 'inextern-lang 0)))
