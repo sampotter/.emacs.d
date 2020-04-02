@@ -122,7 +122,7 @@
 (require 'sfp-text-editing)
 (require 'sfp-transpose)
 (require 'sfp-autocomplete)
-(require 'sfp-rtags)
+; (require 'sfp-rtags)
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;; Languages, modes, and other things.
