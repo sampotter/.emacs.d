@@ -13,6 +13,7 @@
 
 (setq elpy-shell-echo-output nil
 	  python-shell-interpreter "jupyter"
+      python-shell-interpreter-args "console --simple-prompt"
       python-shell-prompt-detect-failure-warning nil)
 
 (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))

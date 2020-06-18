@@ -19,7 +19,8 @@
 (add-hook 'c-mode-common-hook
 		  (lambda ()
 			(c-toggle-comment-style -1)
-			(c-set-offset 'inextern-lang 0)))
+			(c-set-offset 'inextern-lang 0)
+			(hs-minor-mode)))
 
 (setq c-default-style "sfp")
 
