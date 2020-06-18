@@ -93,6 +93,7 @@
 
 (add-to-list 'load-path (concat *sfp-emacs-dir* "el"))
 (add-to-list 'load-path (concat *sfp-emacs-dir* "sfp"))
+(add-to-list 'load-path (concat *sfp-emacs-dir* "bibref"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Starting the Emacs server conditionally:
