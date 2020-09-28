@@ -145,6 +145,7 @@
 (require 'sfp-ido)
 (require 'sfp-info)
 (require 'sfp-irony)
+(require 'sfp-ispc)
 (require 'sfp-latex)
 (require 'sfp-lisp)
 (require 'sfp-magit)

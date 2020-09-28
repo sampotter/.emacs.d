@@ -2,6 +2,8 @@
 
 ;;; Code:
 
+(install-package-if-necessary 'clang-format)
+
 (defun followed-by (cases)
   (cond ((null cases) nil)
         ((assq (car cases)
@@ -20,7 +22,8 @@
 		  (lambda ()
 			(c-toggle-comment-style -1)
 			(c-set-offset 'inextern-lang 0)
-			(hs-minor-mode)))
+			(hs-minor-mode)
+			(global-set-key [C-M-tab] 'clang-format-region)))
 
 (setq c-default-style "sfp")
 

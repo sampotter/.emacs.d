@@ -12,8 +12,8 @@
 (add-to-list 'auto-mode-alist '("\\.pymd" . poly-pweave-mode))
 
 (setq elpy-shell-echo-output nil
-	  python-shell-interpreter "jupyter"
-      python-shell-interpreter-args "console --simple-prompt"
+	  python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt"
       python-shell-prompt-detect-failure-warning nil)
 
 (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
