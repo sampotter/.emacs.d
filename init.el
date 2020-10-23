@@ -77,17 +77,15 @@
 (require 'json)
 
 (defun get-darwin-dropbox-path ()
-  (let* ((json-object-type 'hash-table)
-		 (json-array-type 'list)
-		 (json-key-type 'string)
-		 (json (json-read-file "~/.dropbox/info.json")))
-	(gethash "path" (gethash "personal" json))))
+  (if (system-type-is-darwin)
+      (let* ((json-object-type 'hash-table)
+	     (json-array-type 'list)
+	     (json-key-type 'string)
+	     (json (json-read-file "~/.dropbox/info.json")))
+	(gethash "path" (gethash "personal" json)))
+    nil))
 
 (defconst *sfp-dropbox-dir* (get-darwin-dropbox-path))
-
-(unless (system-type-is-darwin)
-  (error "Finding the Dropbox path on systems other than macOS
-  hasn't been implemented yet"))
 
 (defconst *sfp-emacs-dir* "~/.emacs.d/")
 
@@ -151,7 +149,7 @@
 (require 'sfp-matlab)
 (require 'sfp-org-mode)
 (require 'sfp-pdf)
-(require 'sfp-poly)
+; (require 'sfp-poly)
 (require 'sfp-python)
 (require 'sfp-sublimity)
 (require 'sfp-skeletons)

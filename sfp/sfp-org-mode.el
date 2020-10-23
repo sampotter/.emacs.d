@@ -15,8 +15,10 @@
 (global-set-key (kbd "C-c M-n") 'org-move-item-down)
 (global-set-key (kbd "C-c M-p") 'org-move-item-up)
 
-(setq org-directory (file-name-as-directory (concat *sfp-dropbox-dir* "/org")))
-(setq org-default-notes-file (concat org-directory "/capture.org"))
+(when *sfp-dropbox-dir*
+  (setq org-directory
+	(file-name-as-directory (concat *sfp-dropbox-dir* "/org")))
+  (setq org-default-notes-file (concat org-directory "/capture.org")))
 
 (setq org-capture-templates
   '(("t" "Todo" entry (file+headline org-default-notes-file "Tasks")
@@ -28,9 +30,6 @@
 (setq org-html-postamble nil)
 (setq org-export-with-toc nil)
 (setq org-export-with-author nil)
-
-(setq org-mobile-inbox-for-pull "~/org/flagged.org")
-(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
 (setq org-hide-emphasis-markers t)
 
