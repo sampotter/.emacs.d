@@ -88,3 +88,10 @@
 ;; Delete trailing whitespace when saving files.
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; which-key
+
+(install-package-if-necessary 'which-key)
+
+(which-key-mode)

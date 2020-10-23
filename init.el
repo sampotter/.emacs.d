@@ -91,6 +91,7 @@
 
 (add-to-list 'load-path (concat *sfp-emacs-dir* "el"))
 (add-to-list 'load-path (concat *sfp-emacs-dir* "sfp"))
+(add-to-list 'load-path (concat *sfp-emacs-dir* "bibref"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Starting the Emacs server conditionally:
@@ -142,6 +143,7 @@
 (require 'sfp-ido)
 (require 'sfp-info)
 (require 'sfp-irony)
+(require 'sfp-ispc)
 (require 'sfp-latex)
 (require 'sfp-lisp)
 (require 'sfp-magit)

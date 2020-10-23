@@ -4,6 +4,9 @@
 
 (set-default 'TeX-parse-self t)
 (set-default 'TeX-auto-save t)
+(set-default 'TeX-source-correlate-method 'synctex)
+(set-default 'TeX-source-correlate-mode t)
+(set-default 'TeX-source-correlate-start-server t)
 
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
