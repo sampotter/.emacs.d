@@ -5,6 +5,7 @@
 ;;; Code:
 
 ;; Get rid of extra GUI widgets.
+(fringe-mode '(1 . 1)) ; minimal
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -24,8 +25,9 @@
 		ubuntu-theme))
 
 (defvar *light-theme* 'base16-atelier-dune-light)
-(defvar *dark-theme* 'base16-atelier-dune)
-(defvar *default-theme* *light-theme*)
+; (defvar *dark-theme* 'base16-atelier-dune)
+(defvar *dark-theme* 'base16-seti)
+(defvar *default-theme* *dark-theme*)
 (defvar *current-theme* nil)
 
 (when window-system
@@ -44,7 +46,7 @@
 	(change-theme *dark-theme*))
   (cond
    ((window-system-is-mac)
-	(set-frame-font "Source Code Pro 12" :frames t))
+	(set-frame-font "Monaco 12" :frames t))
    ((window-system-is-x)
 	(set-frame-font "Ubuntu Mono" :frames t))
    (t (error "Unknown window system when setting font")))

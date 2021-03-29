@@ -128,7 +128,6 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;; Languages, modes, and other things.
 
-(require 'sfp-auctex)
 (require 'sfp-cc-mode)
 (require 'sfp-cmake)
 ; (require 'sfp-conda)
@@ -144,10 +143,11 @@
 (require 'sfp-glsl)
 (require 'sfp-ido)
 (require 'sfp-info)
-(require 'sfp-irony)
+; (require 'sfp-irony)
 (require 'sfp-ispc)
 (require 'sfp-latex)
 (require 'sfp-lisp)
+(require 'sfp-lsp)
 (require 'sfp-magit)
 (require 'sfp-markdown)
 (require 'sfp-matlab)
@@ -155,9 +155,11 @@
 (require 'sfp-pdf)
 (require 'sfp-poly)
 (require 'sfp-python)
+(require 'sfp-smart-mode-line)
 (require 'sfp-sublimity)
 (require 'sfp-skeletons)
 (require 'sfp-tramp)
+(require 'sfp-yaml)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Restore the previous desktop

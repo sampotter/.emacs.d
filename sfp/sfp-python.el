@@ -21,5 +21,7 @@
 (add-to-list 'python-shell-completion-native-disabled-interpreters
              "jupyter")
 
+(install-package-if-necessary 'pipenv)
+
 (provide 'sfp-python)
 ;;; sfp-python.el ends here
