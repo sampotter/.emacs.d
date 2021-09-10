@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(add-hook 'eshell-preoutput-filter-functions 'ansi-color-apply)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use the Eshell smart display.
 

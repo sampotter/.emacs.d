@@ -46,7 +46,7 @@
 	(change-theme *dark-theme*))
   (cond
    ((window-system-is-mac)
-	(set-frame-font "Monaco 12" :frames t))
+	(set-frame-font "Menlo 14" :frames t))
    ((window-system-is-x)
 	(set-frame-font "Ubuntu Mono" :frames t))
    (t (error "Unknown window system when setting font")))

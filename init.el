@@ -132,6 +132,7 @@
 (require 'sfp-cuda)
 (require 'sfp-d)
 (require 'sfp-dired)
+(require 'sfp-ebib)
 (require 'sfp-ein)
 (require 'sfp-elisp)
 (require 'sfp-eshell)

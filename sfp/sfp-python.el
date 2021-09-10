@@ -21,6 +21,8 @@
 (add-to-list 'python-shell-completion-native-disabled-interpreters
              "jupyter")
 
+(setq elpy-rpc-virtualenv-path 'current)
+
 (install-package-if-necessary 'pipenv)
 
 (provide 'sfp-python)

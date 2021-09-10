@@ -8,7 +8,7 @@
 (require 'slime-autoloads)
 (add-to-list 'slime-contribs 'slime-fancy)
 
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(setq inferior-lisp-program "sbcl")
 
 (install-package-if-necessary 'slime-company)
 (slime-setup '(slime-company))
