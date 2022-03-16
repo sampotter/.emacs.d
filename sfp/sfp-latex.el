@@ -7,6 +7,8 @@
 (install-package-if-necessary 'auctex)
 (install-package-if-necessary 'latex-math-preview)
 
+(setq-default TeX-engine 'xetex)
+
 (setq-default TeX-auto-save t)
 (setq-default TeX-parse-self t)
 (setq-default TeX-master nil)

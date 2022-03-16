@@ -58,7 +58,8 @@
    (list (kbd "s-w") #'delete-frame)
    (list (kbd "s-c") #'kill-ring-save)
    (list (kbd "s-v") #'yank)
-   (list (kbd "s-x") #'kill-region)))
+   (list (kbd "s-x") #'kill-region)
+   (list (kbd "C-x C-o") #'ff-find-other-file)))
 
 (dolist (keybinding *keybinding-list*)
   (apply #'global-set-key keybinding))

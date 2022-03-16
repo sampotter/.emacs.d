@@ -4,8 +4,6 @@
 
 ;;; Code:
 
-(package-initialize)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Convenience functions.
 
@@ -22,11 +20,6 @@
 (if (have-internet-connection-p)
     (package-initialize)
     (package-refresh-contents))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Install packages which are dependencies of packages installed elsewhere.
-
-(install-package-if-necessary 'cl)
 
 (provide 'sfp-packages)
 ;;; sfp-packages.el ends here

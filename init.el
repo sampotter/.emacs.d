@@ -2,16 +2,12 @@
 ;;; Commentary:
 ;;; Code:
 
-;; Should I do this?
-;; (set-language-environment "utf-8")
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
-
 (require 'cl-lib)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Don't show the startup screen.
+
+(setq inhibit-startup-screen t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; These functions need to be defined first so that we can figure out platform
@@ -140,13 +136,14 @@
 (require 'sfp-gdb)
 (require 'sfp-ggtags)
 (require 'sfp-glsl)
+(require 'sfp-gnuplot)
 (require 'sfp-ido)
 (require 'sfp-info)
 ; (require 'sfp-irony)
 (require 'sfp-ispc)
 (require 'sfp-latex)
 (require 'sfp-lisp)
-(require 'sfp-lsp)
+; (require 'sfp-lsp)
 (require 'sfp-magit)
 (require 'sfp-markdown)
 (require 'sfp-matlab)
@@ -154,6 +151,7 @@
 (require 'sfp-pdf)
 ; (require 'sfp-poly)
 (require 'sfp-python)
+(require 'sfp-sage)
 (require 'sfp-smart-mode-line)
 (require 'sfp-sublimity)
 (require 'sfp-skeletons)

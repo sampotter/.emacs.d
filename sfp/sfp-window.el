@@ -10,24 +10,11 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(mapc #'install-package-if-necessary
-	  '(base16-theme
-		avk-emacs-themes
-		eink-theme
-		greymatters-theme
-		leuven-theme
-		monochrome-theme
-		peacock-theme
-		phoenix-dark-mono-theme
-		punpun-theme
-		solarized-theme
-		tao-theme
-		ubuntu-theme))
+(install-package-if-necessary 'base16-theme)
 
-(defvar *light-theme* 'base16-atelier-dune-light)
-; (defvar *dark-theme* 'base16-atelier-dune)
-(defvar *dark-theme* 'base16-seti)
-(defvar *default-theme* *dark-theme*)
+(defvar *light-theme* 'base16-classic-light)
+(defvar *dark-theme* 'base16-classic-dark)
+(defvar *default-theme* *light-theme*)
 (defvar *current-theme* nil)
 
 (when window-system
@@ -48,7 +35,7 @@
    ((window-system-is-mac)
 	(set-frame-font "Menlo 14" :frames t))
    ((window-system-is-x)
-	(set-frame-font "Ubuntu Mono" :frames t))
+	(set-frame-font "Monospace 12" :frames t))
    (t (error "Unknown window system when setting font")))
   (cond
    ((eq *default-theme* *light-theme*) (light-theme))

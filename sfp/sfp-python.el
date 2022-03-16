@@ -8,8 +8,12 @@
 
 (elpy-enable)
 
-(add-to-list 'auto-mode-alist '("\\.pmd" . poly-pweave-mode))
-(add-to-list 'auto-mode-alist '("\\.pymd" . poly-pweave-mode))
+(setq auto-mode-alist
+	  (append '(("\\.pmd$" . poly-pweave-mode)
+				("\\.pymd$" . poly-pweave-mode)
+				("SConstruct$" . python-mode)
+				("SConscript$" . python-mode))
+			  auto-mode-alist))
 
 (setq elpy-shell-echo-output nil
 	  python-shell-interpreter "ipython"
@@ -24,6 +28,9 @@
 (setq elpy-rpc-virtualenv-path 'current)
 
 (install-package-if-necessary 'pipenv)
+
+(install-package-if-necessary 'cython-mode)
+(install-package-if-necessary 'flycheck-cython)
 
 (provide 'sfp-python)
 ;;; sfp-python.el ends here
