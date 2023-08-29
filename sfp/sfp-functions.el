@@ -8,6 +8,9 @@
   (or (equal window-system 'mac)
 	  (equal window-system 'ns)))
 
+(defun window-system-is-pgtk ()
+  (equal window-system 'pgtk))
+
 (defun window-system-is-x ()
   (equal window-system 'x))
 

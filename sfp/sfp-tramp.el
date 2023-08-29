@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-to-list 'tramp-remote-path 'tramp-own-remote-path)
+; (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 
 (setq enable-remote-dir-locals t)
 

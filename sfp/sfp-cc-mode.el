@@ -25,6 +25,8 @@
 			(hs-minor-mode)
 			(global-set-key [C-M-tab] 'clang-format-region)))
 
+(add-hook 'c-mode-common-hook 'subword-mode)
+
 (setq c-default-style "sfp")
 
 (provide 'sfp-cc-mode)

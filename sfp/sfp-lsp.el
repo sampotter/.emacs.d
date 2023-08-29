@@ -6,8 +6,6 @@
 
 (require 'lsp-mode)
 
-(setq lsp-clients-clangd-executable "/opt/local/libexec/llvm-11/bin/clangd")
-
 (add-hook 'c-mode-hook #'lsp)
 
 (provide 'sfp-lsp)

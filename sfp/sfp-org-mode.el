@@ -32,5 +32,7 @@
 
 (setq org-hide-emphasis-markers t)
 
+(setq org-startup-with-inline-images t)
+
 (provide 'sfp-org-mode)
 ;;; sfp-org-mode.el ends here

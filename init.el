@@ -4,6 +4,8 @@
 
 (require 'cl-lib)
 
+(setq-default global-font-lock-mode nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Don't show the startup screen.
 
@@ -129,7 +131,8 @@
 (require 'sfp-d)
 (require 'sfp-dired)
 (require 'sfp-ebib)
-(require 'sfp-ein)
+(require 'sfp-eglot)
+; (require 'sfp-ein)
 (require 'sfp-elisp)
 (require 'sfp-eshell)
 (require 'sfp-flycheck)
@@ -150,9 +153,11 @@
 (require 'sfp-org-mode)
 (require 'sfp-pdf)
 ; (require 'sfp-poly)
+(require 'sfp-projectile)
 (require 'sfp-python)
 (require 'sfp-sage)
 (require 'sfp-smart-mode-line)
+(require 'sfp-speedbar)
 (require 'sfp-sublimity)
 (require 'sfp-skeletons)
 (require 'sfp-tramp)

@@ -33,17 +33,17 @@
 
 ;; A mode to help prevent going past 80 characters in a line.
 ;; See https://github.com/jordonbiondo/column-enforce-mode/ for more info.
-(add-to-list 'load-path (concat *sfp-emacs-dir* "el/column-enforce-mode"))
-(require 'column-enforce-mode)
-(add-hook 'prog-mode-hook 'column-enforce-mode)
-(setq column-enforce-comments nil)
+;; (add-to-list 'load-path (concat *sfp-emacs-dir* "el/column-enforce-mode"))
+;; (require 'column-enforce-mode)
+;; (add-hook 'prog-mode-hook 'column-enforce-mode)
+;; (setq column-enforce-comments nil)
 
 ;; Highlight TODO, FIXME, and BUG in programming modes.
-(add-hook 'prog-mode-hook
-	  (lambda ()
-	    (font-lock-add-keywords
-	     nil
-	     '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
+;; (add-hook 'prog-mode-hook
+;; 	  (lambda ()
+;; 	    (font-lock-add-keywords
+;; 	     nil
+;; 	     '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use window-number mode for jumping to windows with alt-num.
@@ -110,3 +110,10 @@
 
 (add-hook 'compilation-filter-hook
           #'endless/colorize-compilation)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; visual-fill-column
+
+(install-package-if-necessary 'visual-fill-column)
+
+(add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
