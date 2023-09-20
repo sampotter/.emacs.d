@@ -5,6 +5,7 @@
 .DS_Store
 .cask
 .emacs.desktop
+.lsp-session-v1
 .session
 .session
 GPATH
@@ -20,6 +21,7 @@ el/cedet/
 el/column-enforce-mode/
 el/matlab-emacs/
 el/p4.el/
+eln-cache
 elpa
 elpy
 eshell
@@ -28,6 +30,7 @@ ido.last
 info/*
 irony
 network-security.data
+projectile-bookmarks.eld
 request
 semanticdb
 session.*

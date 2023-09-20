@@ -43,7 +43,7 @@ theme when running Emacs as a daemon.")
    ((window-system-is-mac)
 	(set-frame-font "Menlo 14" :frames t))
    ((or (window-system-is-pgtk) (window-system-is-x))
-	(set-frame-font "Comic Code 11" :frames t))
+	(set-frame-font "Comic Code 13" :frames t))
    (t (error "Unknown window system when setting font")))
   (cond
    ((eq *default-theme* *light-theme*) (light-theme))

@@ -3,6 +3,7 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'package)
 
 (setq-default global-font-lock-mode nil)
 
@@ -146,7 +147,7 @@
 (require 'sfp-ispc)
 (require 'sfp-latex)
 (require 'sfp-lisp)
-; (require 'sfp-lsp)
+(require 'sfp-lsp)
 (require 'sfp-magit)
 (require 'sfp-markdown)
 (require 'sfp-matlab)
@@ -155,6 +156,7 @@
 ; (require 'sfp-poly)
 (require 'sfp-projectile)
 (require 'sfp-python)
+(require 'sfp-realgud)
 (require 'sfp-sage)
 (require 'sfp-smart-mode-line)
 (require 'sfp-speedbar)
